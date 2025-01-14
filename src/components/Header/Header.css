@@ -1,0 +1,53 @@
+.header-side { 
+  height: 100px;
+  width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  background-color: hsl(200, 84.9%, 10.4%);
+}
+
+.logo-icon {
+    height: 80px;
+    width: 260px;
+}
+
+.header-item {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    align-items: center;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+}
+
+.header-item:hover {
+    font-weight: bold;
+}
+
+.header-active {
+    color:wheat;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.header-active:hover {
+    font-weight: bold;
+}
+
+.span-header {
+    margin-left: 5px;
+}
+
+
+
+
+
+
