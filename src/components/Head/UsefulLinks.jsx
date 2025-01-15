@@ -3,10 +3,47 @@ import bmj from "/images/BMJ.png";
 import VOZ from "/images/VOZ.png";
 import VK from "/images/VK.png";
 import YT from "/images/YouTube.png";
+import { useState, useCallback, useEffect } from "react";
+
+/* {
+  loading && (
+    <ReactLoading
+      type="spinningBubbles"
+      color="#007bff"
+      height={100}
+      width={100}
+    />
+  );
+} */
 
 export default function UsefulLinks() {
+  const devApi = "http://localhost:8100/description";
+  const prodApi = "http://localhost:8100/description";
+
+  const [loading, setLoading] = useState(false);
+  const [description, setDescription] = useState([]);
+
+  const fetchDescription = useCallback(async () => {
+    setLoading(true);
+    const response = await fetch(devApi);
+    const desc = await response.json();
+    setDescription(desc);
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    fetchDescription();
+  }, [fetchDescription]);
+
   return (
     <>
+      {/* {!loading && (
+        <ul>
+          {description.map((text) => (
+            <li>{text}</li>
+          ))}
+        </ul>
+      )} */}
       <div className="infoHead">Полезные ссылки</div>
       <div className="useful-links">
         <div
@@ -17,13 +54,7 @@ export default function UsefulLinks() {
             <img src={YT} alt="" className="useful-links-image" />
           </div>
           <div className="useful-links-title">Наш Youtube канал</div>
-          <div className="useful-links-description">
-            Добро пожаловать на наш YouTube канал! Здесь мы делимся актуальными
-            знаниями в области медицины, здоровья и профилактики болезней. Наши
-            эксперты обсуждают самые важные темы, начиная от здорового образа
-            жизни до новейших медицинских исследований. Подписывайтесь, чтобы
-            быть в курсе и заботиться о своем здоровье!
-          </div>
+          <div className="useful-links-description">{description[0]}</div>
         </div>
         <div
           className="useful-links-item"
@@ -33,12 +64,7 @@ export default function UsefulLinks() {
             <img src={VK} alt="" className="useful-links-image" />
           </div>
           <div className="useful-links-title">Мы Вконтакте</div>
-          <div className="useful-links-description">
-            Оставайтесь в курсе последних новостей медицины, здоровья и
-            wellness. Поделитесь опытом и задайте вопросы нашим специалистам. Мы
-            публикуем актуальные статьи, советы по лечению, профилактике и
-            здоровому образу жизни. Ваше здоровье – наша забота!
-          </div>
+          <div className="useful-links-description">{description[1]}</div>
         </div>
         <div
           className="useful-links-item"
@@ -50,15 +76,7 @@ export default function UsefulLinks() {
           <div className="useful-links-title">
             Всемирная организация здравоохранения
           </div>
-          <div className="useful-links-description">
-            Официальный сайт ВОЗ, в отличие от справочника MSD, не рассказывает
-            детально о методах лечения. Задача ресурса — рассказывать о причинах
-            заболеваний, путях передачи, эпидемиологии, симптомах, вспышках
-            болезней, чрезвычайных ситуациях и об актуальных проблемах
-            современной медицины, например, алкоголизме, гепатите, ВИЧ.
-            Большинство статей переведены на русский язык, содержат статистику и
-            распространенность заболеваний по странам.
-          </div>
+          <div className="useful-links-description">{description[2]}</div>
         </div>
         <div
           className="useful-links-item"
@@ -70,14 +88,7 @@ export default function UsefulLinks() {
           <div className="useful-links-title">
             Министерство здравоохранения Российской Федерации
           </div>
-          <div className="useful-links-description">
-            Содержит приказы, клинические протоколы ведения пациентов и
-            стандарты оказания медицинской помощи, в которых содержится перечень
-            диагностических и лечебных действий при различных патологиях. Однако
-            есть минусы: стандарты подогнаны под среднестатического пациента,
-            часто охватывают одновременно стандарты лечения взрослых и детей,
-            информация давно не обновлялась.
-          </div>
+          <div className="useful-links-description">{description[3]}</div>
         </div>
         <div
           className="useful-links-item"
@@ -87,14 +98,7 @@ export default function UsefulLinks() {
             <img src={bmj} alt="" className="useful-links-image" />
           </div>
           <div className="useful-links-title">British Medical Journal</div>
-          <div className="useful-links-description">
-            Британский медицинский журнал публикует статьи, результаты
-            систематических обзоров и клинические исследования. Это один из
-            наиболее цитируемых журналов. Цель издания — образование молодых
-            врачей и медицинских сотрудников, которые недавно начали
-            практиковать и борьба с недостоверной, неэтичной и устаревшей
-            информацией.
-          </div>
+          <div className="useful-links-description">{description[4]}</div>
         </div>
       </div>
     </>
