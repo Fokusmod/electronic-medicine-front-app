@@ -1,9 +1,11 @@
-/* import { createPortal } from "react-dom";
+import { createPortal } from "react-dom";
 import { useRef, useEffect } from "react";
 import "./Modal.css";
 
 export default function Modal({ children, open }) {
   const dialog = useRef();
+
+  console.log(children);
 
   useEffect(() => {
     if (open) {
@@ -18,4 +20,3 @@ export default function Modal({ children, open }) {
     document.getElementById("modal")
   );
 }
- */

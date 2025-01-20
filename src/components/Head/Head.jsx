@@ -7,6 +7,7 @@ import UsefulLinks from "./UsefulLinks";
 export default function Head() {
   return (
     <>
+      <div id="modal"></div>
       <HeadDescription />
       <Slider />
       <AboutUs />

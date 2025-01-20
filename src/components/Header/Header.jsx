@@ -1,7 +1,7 @@
 import logo from "/icons/logo-medicine-white.png";
 import { useState } from "react";
 import { styled } from "styled-components";
-import "./header.css";
+import "./Header.css";
 
 import Profile from "../Profile/Profile";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -17,11 +17,14 @@ import Cloak from "./Cloak";
 const HeaderContainer = styled.header`
   height: 100px;
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid hsl(200, 84.9%, 10.4%);
   background: hsl(200, 85.2%, 15.9%);
   margin-bottom: 1rem;
+  z-index: 99999999;
 `;
 
 {
@@ -109,17 +112,6 @@ export default function Header() {
         >
           <span className="span-header">Приём пациентов</span>
         </Link>
-        <Link
-          className={
-            IsActiveTab === "login"
-              ? "header-active header-item"
-              : "header-item"
-          }
-          to="/login"
-          onClick={() => onChangeActionTab("login")}
-        >
-          <span>Вход</span>
-        </Link>
 
         {/* <Link to="/registration" className="header-item">
           Регистрация
@@ -130,12 +122,19 @@ export default function Header() {
 
         <Cloak />
         <div className="header-side">
-          <Link to="/profile" className="header-item">
-            Личный кабинет
+          <Link
+            className="header-item"
+            to="/login"
+            onClick={() => onChangeActionTab("login")}
+          >
+            <span className="span-header">Войти</span>
           </Link>
         </div>
-      </HeaderContainer>
 
+        {/* <Link to="/profile" className="header-item">
+          Личный кабинет
+        </Link> */}
+      </HeaderContainer>
       <Routes>
         <Route path="*" element={""} />
         <Route path="/" element={<Head />} />
