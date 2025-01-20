@@ -17,8 +17,8 @@ import { useState, useCallback, useEffect } from "react";
 } */
 
 export default function UsefulLinks() {
-  const devApi = "http://localhost:8100/description";
-  const prodApi = "http://localhost:8100/description";
+  const devApi = "http://localhost:80/api/description";
+  const prodApi = "http://localhost:8100/";
 
   const [loading, setLoading] = useState(false);
   const [description, setDescription] = useState([]);

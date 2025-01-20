@@ -1,8 +1,50 @@
-export default function Login() {
+import { useState } from "react";
+import Modal from "../ModalAuth/Modal.jsx";
+import logo from "/icons/logo-medicine-white.png";
+import "./Login.css";
+import SignIn from "./SignIn.jsx";
+import SignUp from "./SignUp.jsx";
+
+export default function Login({ active }) {
+  const [IsActiveTab, setIsActiveTab] = useState("sigh-in");
+
   return (
     <>
-      <div>
-        <h3>Hello Login</h3>
+      <div className="auth-div">
+        <div className="auth-image-div">
+          <img src={logo} alt="Electronic medicine" className="auth-logo" />
+        </div>
+
+        <div className="auth-select">
+          <div className="auth-button-div">
+            <button
+              onClick={() => {
+                setIsActiveTab("sigh-in");
+              }}
+              className={
+                IsActiveTab === "sigh-in"
+                  ? "auth-button auth-button-active"
+                  : "auth-button"
+              }
+            >
+              Войти
+            </button>
+            <button
+              onClick={() => {
+                setIsActiveTab("sigh-up");
+              }}
+              className={
+                IsActiveTab === "sigh-up"
+                  ? "auth-button auth-button-active"
+                  : "auth-button"
+              }
+            >
+              Регистрация
+            </button>
+          </div>
+        </div>
+        <SignIn isActive={IsActiveTab} />
+        <SignUp isActive={IsActiveTab} />
       </div>
     </>
   );

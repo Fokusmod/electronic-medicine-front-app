@@ -1,11 +1,26 @@
+::-webkit-scrollbar {
+    width: 0;
+}
 
 .head {
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    background-image: url('./images/slider-background.png');
     background-size: cover;
     margin-bottom: 40px;
+}
+
+.info {
+    margin-top: 120px;
+}
+
+.background-image {
+    display: flex;
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 500px;
 }
 
 .slider {

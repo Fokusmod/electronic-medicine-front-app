@@ -1,0 +1,137 @@
+
+
+.auth-div {
+    margin: auto;
+    margin-top: 160px;
+    width: 500px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+   /*  background-color: hsl(200, 84.9%, 10.4%); */
+    border-radius: 15px;
+    border: 1px solid hsl(202, 45%, 86%);
+}
+
+.auth-image-div {
+    background-color: hsl(200, 84.9%, 10.4%);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.auth-logo {
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.auth-button-div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content:space-between;
+    margin-left: 135px;
+    margin-right: 135px;
+}
+
+.auth-button {
+    margin-top: 10px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    color: hsl(200, 84.9%, 10.4%);
+}
+
+.auth-button:hover {
+    cursor: pointer;
+}
+
+.auth-button-active {
+    text-decoration-line: underline;
+}
+
+.auth-section {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    left: 37%;
+    width: 500px;
+    height: 41%;
+}
+
+.auth-section-hide {
+    visibility: hidden;
+}
+
+.auth-section-visible {
+    visibility: visible;
+}
+
+.auth-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60%;
+}
+
+.auth-label {
+    font-size: 20px;
+    color: hsl(200, 84.9%, 10.4%);
+
+}
+.auth-label-checkbox {
+    font-size: 18px;
+    color: hsl(200, 84.9%, 10.4%);
+    margin-left: 30px;
+}
+
+.auth-checkbox {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    accent-color: hsl(200, 83%, 21%);
+}
+
+.auth-input {
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(213, 80%, 94%);
+    outline: none;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+.auth-submit {
+    width: 60%;
+    height: 35px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(200, 84.9%, 10.4%);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.auth-submit:hover {
+    cursor: pointer;
+    background-color: hsl(200, 85%, 23%);
+}
+
+.forgot-password-btn {
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    text-decoration-line: underline;
+    margin-top: 20px;
+}
+
+.forgot-password-btn:hover {
+    cursor: pointer;
+}
