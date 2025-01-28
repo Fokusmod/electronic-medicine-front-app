@@ -9,27 +9,23 @@ export default function FooterButton() {
     smooth: true,
   };
 
+  function navigate(path) {
+    navigation(path);
+    animateScroll.scrollToTop(options);
+  }
+
   return (
     <>
-      <button
-        className="footer-btn"
-        onClick={() => {
-          navigation("/");
-          animateScroll.scrollToTop(options);
-        }}
-      >
+      <button className="footer-btn" onClick={() => navigate("/")}>
         Главная
       </button>
-      <button className="footer-btn" onClick={() => navigation("/appointment")}>
+      <button className="footer-btn" onClick={() => navigate("/appointment")}>
         Запись на приём
       </button>
-      <button className="footer-btn" onClick={() => navigation("/specialist")}>
+      <button className="footer-btn" onClick={() => navigate("/specialist")}>
         Специалисты
       </button>
-      <button
-        className="footer-btn"
-        onClick={() => navigation("/registration")}
-      >
+      <button className="footer-btn" onClick={() => navigate("/registration")}>
         Регистрация
       </button>
     </>

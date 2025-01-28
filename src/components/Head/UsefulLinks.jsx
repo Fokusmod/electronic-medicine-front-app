@@ -5,6 +5,8 @@ import VK from "/images/VK.png";
 import YT from "/images/YouTube.png";
 import { useState, useCallback, useEffect } from "react";
 
+import { links } from "/src/components/Head/dataHead.js";
+
 /* {
   loading && (
     <ReactLoading
@@ -17,10 +19,10 @@ import { useState, useCallback, useEffect } from "react";
 } */
 
 export default function UsefulLinks() {
-  const devApi = "http://localhost:80/api/description";
+  const devApi = "http://localhost:8080/description";
   const prodApi = "http://localhost:8100/";
 
-  const [loading, setLoading] = useState(false);
+  /* const [loading, setLoading] = useState(false);
   const [description, setDescription] = useState([]);
 
   const fetchDescription = useCallback(async () => {
@@ -33,7 +35,7 @@ export default function UsefulLinks() {
 
   useEffect(() => {
     fetchDescription();
-  }, [fetchDescription]);
+  }, [fetchDescription]); */
 
   return (
     <>
@@ -54,7 +56,7 @@ export default function UsefulLinks() {
             <img src={YT} alt="" className="useful-links-image" />
           </div>
           <div className="useful-links-title">Наш Youtube канал</div>
-          <div className="useful-links-description">{description[0]}</div>
+          <div className="useful-links-description">{links[0].description}</div>
         </div>
         <div
           className="useful-links-item"
@@ -64,7 +66,7 @@ export default function UsefulLinks() {
             <img src={VK} alt="" className="useful-links-image" />
           </div>
           <div className="useful-links-title">Мы Вконтакте</div>
-          <div className="useful-links-description">{description[1]}</div>
+          <div className="useful-links-description">{links[1].description}</div>
         </div>
         <div
           className="useful-links-item"
@@ -76,7 +78,7 @@ export default function UsefulLinks() {
           <div className="useful-links-title">
             Всемирная организация здравоохранения
           </div>
-          <div className="useful-links-description">{description[2]}</div>
+          <div className="useful-links-description">{links[2].description}</div>
         </div>
         <div
           className="useful-links-item"
@@ -88,7 +90,7 @@ export default function UsefulLinks() {
           <div className="useful-links-title">
             Министерство здравоохранения Российской Федерации
           </div>
-          <div className="useful-links-description">{description[3]}</div>
+          <div className="useful-links-description">{links[3].description}</div>
         </div>
         <div
           className="useful-links-item"
@@ -98,7 +100,7 @@ export default function UsefulLinks() {
             <img src={bmj} alt="" className="useful-links-image" />
           </div>
           <div className="useful-links-title">British Medical Journal</div>
-          <div className="useful-links-description">{description[4]}</div>
+          <div className="useful-links-description">{links[4].description}</div>
         </div>
       </div>
     </>

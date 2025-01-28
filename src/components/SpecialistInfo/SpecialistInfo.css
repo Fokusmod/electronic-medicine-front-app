@@ -1,0 +1,92 @@
+.info-head {
+    margin-top: 10%;
+    margin-left: 28%;
+}
+
+.info-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.info-block-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-photo {
+    height: 400px;
+    width: 25%;
+    margin-right: 30px;
+}
+
+.about-spesialist {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 34%;
+}
+.about-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 20px;
+}
+
+.about-item-box {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.about-item-title {
+    font-weight: bold;
+}
+
+.about-item-data {
+    margin-top: 7px;
+}
+
+.about-end {
+    margin-top: 2%;
+    height: 400px;
+    width: 62%;
+    margin-bottom: 10%;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+
+.select-box {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid silver;
+}
+
+.select-box-bth {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    width: 12%;
+}
+
+.select-box-bth:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.active {
+    background-color: hsl(199, 93%, 17%);
+    color: wheat;
+    text-decoration: underline;
+    font-weight: bold;
+}

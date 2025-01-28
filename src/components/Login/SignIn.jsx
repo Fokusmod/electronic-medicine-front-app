@@ -1,6 +1,6 @@
-export default function SighIn(active) {
-  console.log(active.isActive == "sigh-in");
+import Button from "../Button/Button";
 
+export default function SighIn(active) {
   return (
     <section
       className={
@@ -9,15 +9,25 @@ export default function SighIn(active) {
           : "auth-section auth-section-hide"
       }
     >
-      <form className="auth-form">
-        <label htmlFor="email" className="auth-label">
-          Email1`1`
+      <form className="auth-form" style={{ marginTop: "50px" }}>
+        <label htmlFor="email-login" className="auth-label">
+          Email
         </label>
-        <input type="email" id="email" className="auth-input"></input>
-        <label htmlFor="password" className="auth-label">
+        <input
+          type="email"
+          id="email-login"
+          className="auth-input"
+          autoComplete="username"
+        ></input>
+        <label htmlFor="password-login" className="auth-label">
           Пароль
         </label>
-        <input type="password" id="password" className="auth-input"></input>
+        <input
+          type="password"
+          id="password-login"
+          className="auth-input"
+          autoComplete="current-password"
+        ></input>
         <div>
           <input
             type="checkbox"
@@ -28,9 +38,13 @@ export default function SighIn(active) {
             Запомнить меня
           </label>
         </div>
-        <button className="auth-submit">Войти</button>
+        <div className="btn-container">
+          <Button name="Войти" className="auth-submit" />
+        </div>
 
-        <button className="forgot-password-btn">Забыли пароль?</button>
+        <button className="auth-link" style={{ marginBottom: "30px" }}>
+          Забыли пароль?
+        </button>
       </form>
     </section>
   );
