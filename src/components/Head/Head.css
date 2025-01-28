@@ -46,7 +46,7 @@
 .slider-btn-prev {
     position: absolute;
     left: 44%;
-    top: 55%;
+    top: 60%;
     transform: translateY(-50%) rotate(180deg);
     font-size: 30px;
     color: silver;
@@ -57,7 +57,7 @@
 .slider-btn-next {
     position: absolute;
     right: 7.5%;
-    top: 55%;
+    top: 60%;
     transform: translateY(-50%);
     font-size: 30px;
     color: silver;
@@ -106,7 +106,7 @@
     max-width: 800px;
     max-height: 490px;
     position: absolute;
-    top: 28.2%;
+    top: 33.2%;
     left: 0;
     padding: 50px;
     padding-left: 200px;
@@ -234,4 +234,180 @@
     height: 80px;
     width: 280px;
     padding: 10px;
+}
+
+@media screen and (max-width: 1700px) and (min-width: 1500px) {
+    .infoHeadDescription {
+            text-align: center;
+        }
+    
+        .background-image {
+            height: 420px;
+        }
+    
+        .slider-info {
+            max-width: 500px;
+            max-height: 400px;
+            top: 40%;
+            left: 7%;
+            padding: 0;
+        }
+    
+        .slider-info-title {
+            font-size: 22px;
+        }
+    
+        .slider-info-desc {
+            font-size: 20px;
+        }
+    
+        .slider {
+            margin: 0;
+            width: 45%;
+            margin-top: 30px;
+            margin-left: 40%
+        }
+    
+        .slider-img {
+            width: 100% !important;
+            height: 350px !important;
+        }
+    
+        .slider-btn-prev {
+            top: 61%;
+            left: 45%;
+        }
+    
+        .slider-btn-next {
+            top: 61%;
+            right: 5%;
+        }
+    
+        .slider-btn {
+            margin: 0;
+            top: 80%;
+            margin-left: 8%;
+        }
+    
+        .about-item {
+            height: 200px;
+        }
+    
+        .about-description {
+            height: 100px;
+            text-align: center;
+        }
+    
+        .useful-links-item {
+            max-height: 350px;
+        }
+    
+        .useful-links-title {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+    
+        .useful-links-image-container {
+            width: auto;
+            height: 50px;
+        }
+}
+
+@media screen and (max-width: 1499px) and (min-width: 1200px) {
+    .infoHeadDescription {
+      text-align: center;     
+    }
+
+    .background-image {
+        height: 420px;
+    }
+
+    .slider-info {
+        max-width: 500px;
+        max-height: 400px;
+        top: 42%;
+        left: 2%;
+        padding: 0;
+    }
+
+    .slider-info-title {
+        font-size: 22px;
+    }
+
+    .slider-info-desc {
+        font-size: 20px;
+    }
+
+    .slider {
+        margin: 0;
+        width: 48%;
+        margin-top: 30px;
+        margin-left: 40%
+    }
+
+    .slider-img {
+        width: 100% !important;
+        height: 350px !important;
+    }
+
+    .slider-btn-prev {
+        top: 61%;
+        left: 43%;
+    }
+
+    .slider-btn-next {
+        top: 61%;
+        right: 3%;
+    }
+
+    .slider-btn {
+       margin: 0;
+       top: 80%;
+       margin-left: 8%;
+    }
+    .about-item {
+        height: 200px;
+    }
+
+    .about-description {
+        height: 100px;
+        text-align: center;
+    }
+
+    .useful-links-item {
+        max-height: 350px;
+    }
+
+    .useful-links-title {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .useful-links-image-container {
+        width: auto;
+        height: 50px;
+    }
+
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .infoHeadDescription {
+            text-align: center;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .infoHeadDescription {
+            text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+    .infoHeadDescription {
+            text-align: center;
+    }
 }

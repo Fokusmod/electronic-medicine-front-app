@@ -1,0 +1,78 @@
+.top-navigation {
+    position: fixed;
+    left: -2%;
+    top: 15%;
+    margin-left: 50px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+    transition: .2s linear;
+    color: white;
+    clip-path: polygon(50% 0%, 40% 25%, 60% 26%);
+    background-color: hsl(199, 68%, 83%);
+}
+
+.back-navigation {
+    position: fixed;
+    left: 0;
+    top: 13.7%;
+    margin-left: 50px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+    transition: .2s linear;
+    color: white;
+    clip-path: polygon(5% 50%, 15% 80%, 15% 20%);
+    background-color: hsl(199, 68%, 83%);
+}
+
+
+.top-btn-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    left: 3.8%;
+    top: 13.8%;
+    display: none;
+}
+
+.back-btn-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    left: 3.8%;
+    top: 13.8%;
+    padding: 4px;
+}
+
+.to-top-btn-text {
+    color: silver;
+    position: fixed;
+    left: 3.8%;
+    top: 13.8%;
+    padding: 4px;
+    font-weight: bold;
+    transition: .2s linear;
+}
+.to-top-btn-text:hover {
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.top-btn-div:hover .top-navigation {
+    background-color: hsl(199, 93%, 17%);
+}
+
+.back-btn-div:hover .back-navigation{
+    background-color: hsl(199, 93%, 17%);
+}
+
+.active {
+    display: block;
+}

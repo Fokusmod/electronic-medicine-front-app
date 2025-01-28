@@ -5,7 +5,7 @@ export default function HeadDescription() {
     <>
       <div className="info">
         <div className="infoHead">{description.title}</div>
-        <div className="infoHeadDescription">{description.description}</div>
+        <p className="infoHeadDescription">{description.description}</p>
       </div>
     </>
   );

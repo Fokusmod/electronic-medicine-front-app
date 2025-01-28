@@ -2,6 +2,7 @@ import { useState } from "react";
 import Modal from "../ModalAuth/Modal.jsx";
 import logo from "/icons/logo-medicine-white.png";
 import "./Login.css";
+import ToTopBtn from "../Navigate-Btn/ToTopBtn";
 import SignIn from "./SignIn.jsx";
 import SignUp from "./SignUp.jsx";
 
@@ -10,6 +11,7 @@ export default function Login({ active }) {
 
   return (
     <>
+      <ToTopBtn />
       <div className="auth-div">
         <div className="auth-image-div">
           <img src={logo} alt="Electronic medicine" className="auth-logo" />

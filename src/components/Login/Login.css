@@ -110,7 +110,8 @@
 .auth-submit {
     width: 60%;
     height: 35px;
-    margin-top: 50px;
+    margin-bottom: auto;
+    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
     background-color: hsl(200, 84.9%, 10.4%);
@@ -124,14 +125,22 @@
     background-color: hsl(200, 85%, 23%);
 }
 
-.forgot-password-btn {
+.auth-link {
     border: none;
     background-color: white;
     font-size: 15px;
     text-decoration-line: underline;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.forgot-password-btn:hover {
+.auth-link:hover {
     cursor: pointer;
+    color: hsl(200, 94%, 48%);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }

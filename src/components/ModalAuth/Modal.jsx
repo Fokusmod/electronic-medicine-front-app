@@ -5,8 +5,6 @@ import "./Modal.css";
 export default function Modal({ children, open }) {
   const dialog = useRef();
 
-  console.log(children);
-
   useEffect(() => {
     if (open) {
       dialog.current.showModal();
