@@ -1,0 +1,213 @@
+export default function SelectProfileSpecialist(props) {
+  function stepOne(specName, thisStage, nextStage, firstStep, nextStep) {
+    console.log(specName);
+    thisStage.current.classList.add("complete");
+    nextStage.current.classList.remove("hide");
+    firstStep.current.classList.add("hide");
+    nextStep.current.classList.remove("hide");
+  }
+
+  return (
+    <>
+      <div className="appoint-reserv-title">Выберите направление</div>
+      <div className="appoint-reserv-data">
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+        <div
+          className="data-item"
+          onClick={() =>
+            stepOne(
+              "Кардиолог",
+              props.thisStage,
+              props.nextStage,
+              props.firstStep,
+              props.nextStep
+            )
+          }
+        >
+          Кардиолог
+        </div>
+      </div>
+    </>
+  );
+}

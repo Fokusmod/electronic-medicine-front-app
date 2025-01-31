@@ -117,15 +117,6 @@ export default function Slider() {
           </div>
           <div ref={sliderImages3} className="slider-img">
             <img src={card} alt="медицинская карта" />
-            <button
-              className="slider-btn"
-              onClick={() => {
-                navigate("/medical-сard");
-                clearInterval(interval);
-              }}
-            >
-              Подробнее
-            </button>
           </div>
           <div ref={sliderImages4} className="slider-img">
             <img src={specialists} alt="Наши специалисты" />

@@ -1,56 +1,39 @@
-import BackBtn from "../Navigate-Btn/BackBtn";
-import Button from "../Button/Button";
+import BackBtnHiddenOnScrollBottom from "../Navigate-Btn/BackBtnHiddenOnScrollBottom";
+import ToTopBtn from "../Navigate-Btn/ToTopBtn";
 import Footer from "../Footer/Footer";
+
 import "./SpecialistInfo.css";
 
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import AboutSpecialist from "./AboutSpesialist";
+import AboutEducation from "./AboutEducation";
+import AboutReview from "./AboutReview";
+import SendReview from "./SendReview";
 
 export default function SpecialistInfo() {
   const idParam = useParams().id;
+  const about = useRef();
+  const review = useRef();
   const [activeBtn, setActiveBtn] = useState("about");
 
+  function showBlock(active) {
+    setActiveBtn(active);
+    if (active === "about") {
+      about.current.classList.add("visible");
+      review.current.classList.remove("visible");
+    } else {
+      review.current.classList.add("visible");
+      about.current.classList.remove("visible");
+    }
+  }
   return (
     <>
-      <BackBtn />
+      <BackBtnHiddenOnScrollBottom />
+      <ToTopBtn />
       <div className="info-head">
-        <div className="info-title">Новикова Элла Александровна</div>
-        <div className="info-block-row">
-          <img
-            src="/temp/medic-2.png"
-            alt="specialist"
-            className="info-photo"
-          />
-          <div className="about-spesialist">
-            <div className="about-left">
-              <div className="about-item-box">
-                <div className="about-item-title">Должность</div>
-                <div className="about-item-data">Врач</div>
-              </div>
-              <div className="about-item-box">
-                <div className="about-item-title">Специальность</div>
-                <div className="about-item-data">Онколог</div>
-              </div>
-              <div className="about-item-box">
-                <div className="about-item-title">Возраст</div>
-                <div className="about-item-data">30 лет</div>
-              </div>
-              <div className="about-item-box">
-                <div className="about-item-title">Профессиональный стаж</div>
-                <div className="about-item-data">5 лет</div>
-              </div>
-              <div className="about-item-box">
-                <div className="about-item-title">Статус</div>
-                <div className="about-item-data">В работе</div>
-              </div>
-            </div>
-            <div className="about-right">
-              <Button name="Записаться" />
-              <Button name="Оставить отзыв" />
-            </div>
-          </div>
-        </div>
-        <div className="about-end">
+        <AboutSpecialist />
+        <div className="about-end" id="about-end">
           <div className="select-box">
             <div
               className={
@@ -58,7 +41,7 @@ export default function SpecialistInfo() {
                   ? "select-box-bth active"
                   : "select-box-bth"
               }
-              onClick={() => setActiveBtn("about")}
+              onClick={() => showBlock("about")}
             >
               О враче
             </div>
@@ -68,32 +51,19 @@ export default function SpecialistInfo() {
                   ? "select-box-bth active"
                   : "select-box-bth"
               }
-              onClick={() => setActiveBtn("review")}
+              onClick={() => showBlock("review")}
             >
               Отзывы
             </div>
           </div>
-
-          <div id="about-spesialist">
-            <div className="about-item-box" style={{ marginLeft: "0px" }}>
-              <div className="about-item-title">
-                Профессиональное образование
-              </div>
-              <div className="about-item-data">РНИМУ им. Н.И. Пирогова</div>
-            </div>
-            <div className="about-item-box" style={{ marginLeft: "0px" }}>
-              <div className="about-item-title">Повышение квалификации</div>
-              <div className="about-item-data">
-                ККМЧ Первого МГМУ им И.М.Сеченова
-              </div>
-            </div>
+          <div ref={about} className="about-hidden-info visible">
+            <AboutEducation />
           </div>
-
-          <div id="reviews">
-            <div className="review-item">
-              <div className="autor-name"></div>
-              <div className="autor-title"></div>
-            </div>
+          <div ref={review} className="hidden-info-review">
+            <AboutReview />
+          </div>
+          <div className="send-review">
+            <SendReview />
           </div>
         </div>
       </div>

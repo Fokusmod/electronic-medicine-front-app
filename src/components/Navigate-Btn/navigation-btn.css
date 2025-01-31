@@ -48,7 +48,7 @@
     position: fixed;
     left: 3.8%;
     top: 13.8%;
-    padding: 4px;
+    display: none;
 }
 
 .to-top-btn-text {
@@ -75,4 +75,24 @@
 
 .active {
     display: block;
+}
+
+.back-step {
+    position: absolute;
+    top: 35.5%;
+    left: 25%;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    padding-top: 5px;
+    background-color: hsl(199, 100%, 73%);
+    color: hsl(199, 93%, 17%);
+    font-weight: bold;
+    clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 9% 100%, 0% 50%, 11% 0);
+}
+
+.back-step:hover {
+    cursor: pointer;
+    color: white;
+    background-color: hsl(199, 94%, 36%);
 }
