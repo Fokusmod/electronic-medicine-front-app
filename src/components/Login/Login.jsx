@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Modal from "../ModalAuth/Modal.jsx";
 import logo from "/icons/logo-medicine-white.png";
 import "./Login.css";
 import ToTopBtn from "../Navigate-Btn/ToTopBtn";

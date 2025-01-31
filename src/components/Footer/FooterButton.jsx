@@ -25,9 +25,6 @@ export default function FooterButton() {
       <button className="footer-btn" onClick={() => navigate("/specialist")}>
         Специалисты
       </button>
-      <button className="footer-btn" onClick={() => navigate("/registration")}>
-        Регистрация
-      </button>
     </>
   );
 }

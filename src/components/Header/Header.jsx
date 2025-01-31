@@ -174,17 +174,6 @@ export default function Header() {
       </Link>
       <Link
         className={
-          IsActiveTab === "medical-сard"
-            ? "header-active header-item"
-            : "header-item"
-        }
-        to="/medical-сard"
-        onClick={() => onChangeActionTab("medical-сard")}
-      >
-        Мед. карта
-      </Link>
-      <Link
-        className={
           IsActiveTab === "reception"
             ? "header-active header-item"
             : "header-item"
