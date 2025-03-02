@@ -1,7 +1,17 @@
+import { useEffect, useRef, useState } from "react";
 import Button from "../../Button/Button";
 import "./components.css";
 
-export default function Section() {
+export default function Section(props) {
+  const devApi = localStorage.getItem("host");
+
+  let storage = null;
+  if (sessionStorage.getItem("expire") !== null) {
+    storage = sessionStorage;
+  } else if (localStorage.getItem("expire") !== null) {
+    storage = localStorage;
+  }
+
   let dateMoscow = new Date().toLocaleDateString("ru-RU", {
     timeZone: "Europe/Moscow",
   });
@@ -16,6 +26,99 @@ export default function Section() {
   let currentDatePlusOneMonth =
     datePlusOneMonth[2] + "-" + datePlusOneMonth[1] + "-" + datePlusOneMonth[0];
 
+  let from = useRef();
+  let until = useRef();
+  let selectSpec = useRef();
+  let specialisation = useRef();
+  let fromDate = null;
+  let untilDate = null;
+
+  function setFromDate() {
+    fromDate = from.current.value;
+  }
+  function setUntilDate() {
+    untilDate = until.current.value;
+  }
+
+  function resetDone() {
+    specialisation.current.innerText = "";
+  }
+
+  function acceptVacation() {}
+
+  async function setSpecialisation() {
+    var text =
+      selectSpec.current.options[selectSpec.current.selectedIndex].text;
+    var id = props.id;
+    const response = await fetch(
+      devApi + "/spec/setSpecialisationUser/" + id + "/" + text,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + storage.getItem("access"),
+        },
+      }
+    );
+    if (response.status === 200) {
+      specialisation.current.innerText = "done!";
+    } else {
+      specialisation.current.innerText = "error...";
+    }
+  }
+
+  async function setAdminRole() {
+    const response = await fetch(devApi + "/staff/setAdminRole/" + props.id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + storage.getItem("access"),
+      },
+    });
+    if (response.status !== 200) {
+      console.log("Что то пошло не так");
+    } else {
+      window.location.reload();
+    }
+  }
+
+  async function deleteAdminRole() {
+    const response = await fetch(
+      devApi + "/staff/deleteAdminRole/" + props.id,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + storage.getItem("access"),
+        },
+      }
+    );
+
+    if (response.status !== 200) {
+      console.log("Что то пошло не так");
+    } else {
+      window.location.reload();
+    }
+  }
+
+  async function removeSpecialist() {
+    const response = await fetch(
+      devApi + "/staff/downgradeSpecialistToUser/" + props.id,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + storage.getItem("access"),
+        },
+      }
+    );
+    if (response.status !== 200) {
+      console.log("Что то пошло не так");
+    } else {
+      window.location.reload();
+    }
+  }
+
   return (
     <>
       <p className="section-title">Выберите нужные действия:</p>
@@ -25,7 +128,7 @@ export default function Section() {
           <div className="rows-box">
             <p
               style={{
-                marginLeft: "10%",
+                marginLeft: "5%",
                 paddingTop: "12px",
                 color: "hsl(200, 85.2%, 15.9%)",
               }}
@@ -33,10 +136,12 @@ export default function Section() {
               С:
             </p>
             <input
+              ref={from}
               className="section-input"
               id="date"
               type="date"
-              value={currentDate}
+              defaultValue={currentDate}
+              onChange={setFromDate}
             />
             <p
               style={{
@@ -47,33 +152,50 @@ export default function Section() {
               До:
             </p>
             <input
+              ref={until}
               className="section-input"
               id="date"
               style={{ marginBottom: "30px" }}
               type="date"
-              value={currentDatePlusOneMonth}
+              defaultValue={currentDatePlusOneMonth}
+              onChange={setUntilDate}
             />
           </div>
-          <Button name="Подтвердить" />
+          <Button name="Подтвердить" func={acceptVacation} />
         </div>
         <div className="middle-side-section">
-          <p className="section-title-name">Должность</p>
-          <div>
-            <select name="select-up" className="select-position">
-              <option value="value1">Значение 1</option>
-              <option value="value2" selected>
-                Значение 2
-              </option>
-              <option value="value3">Значение 3</option>
+          <div className="spec-section">
+            <div className="section-title-name">Должность</div>
+            <div ref={specialisation} className="done-section"></div>
+          </div>
+
+          <div className="middle-centered">
+            <select
+              ref={selectSpec}
+              name="select-up"
+              className="select-position"
+              onChange={resetDone}
+            >
+              {props.specs.map(function (data, i) {
+                return (
+                  <option key={i} value="value1">
+                    {data.title}
+                  </option>
+                );
+              })}
             </select>
-            <Button name="Назначить" />
+            <Button name="Назначить" func={setSpecialisation} />
           </div>
         </div>
         <div className="right-side-section">
           <p className="section-title-name">Прочее</p>
-          <Button name="Админ-права" />
+          {props.admin ? (
+            <Button name="Убрать права" func={deleteAdminRole} />
+          ) : (
+            <Button name="Админ-права" func={setAdminRole} />
+          )}
           <div className="section-line"></div>
-          <Button name="Уволить" />
+          <Button name="Уволить" func={removeSpecialist} />
         </div>
       </div>
     </>

@@ -24,6 +24,7 @@ export default function UserItem(props) {
       allItems[i].classList.remove("emp-selected");
     }
   }
+
   return (
     <>
       <div
@@ -33,13 +34,18 @@ export default function UserItem(props) {
           showSection(props.id);
         }}
       >
-        <div className="emp-data">{props.firstName}</div>
-        <div className="emp-data">{props.lastName}</div>
-        <div className="emp-data">{props.position}</div>
-        <div className="emp-data">{props.approve}</div>
+        <div className="left-sector-user">
+          <div className="usr-data">{props.firstName}</div>
+          <div className="usr-data">{props.lastName}</div>
+          <div className="usr-data">{props.email}</div>
+        </div>
+        <div className="right-sector-user">
+          <div className="usr-data">{props.approve}</div>
+          <div className="usr-data">{props.position}</div>
+        </div>
       </div>
       <div className="emp-section" id={props.id}>
-        <UserSection />
+        <UserSection specs={props.specs} id={props.id} admin={props.admin} />
       </div>
     </>
   );

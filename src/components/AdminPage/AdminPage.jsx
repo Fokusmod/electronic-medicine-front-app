@@ -36,30 +36,9 @@ export default function AdminPage() {
           >
             Пользователи
           </Link>
-          <Link
-            to="notification"
-            className={
-              selected === "notification"
-                ? "admin-select-btn admin-select-btn-active"
-                : "admin-select-btn"
-            }
-            onClick={() => setSelected("notification")}
-          >
-            Уведомления
-          </Link>
-          <Link
-            to="mailing"
-            className={
-              selected === "mailing"
-                ? "admin-select-btn admin-select-btn-active"
-                : "admin-select-btn"
-            }
-            onClick={() => setSelected("mailing")}
-          >
-            Рассылки
-          </Link>
         </div>
       </div>
+
       <Outlet />
     </>
   );

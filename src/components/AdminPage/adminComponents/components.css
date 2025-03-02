@@ -1,38 +1,3 @@
-.find-box {
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-}
-
-.find-title {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: hsl(200, 85.2%, 15.9%);
-    padding: 10px;
-    border: 1px solid rgb(133, 132, 132);
-    color: white;
-    border-radius: 5px 5px 0 0;
-}
-
-.find-findbox {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 400px;
-    font-size: 20px;
-    margin-left: 20px;
-}
-
-.find-input {
-    height: 60%;
-    width: 60%;
-    outline: none;
-    padding: 0.5rem;
-}
-
 .section-title {
     padding-left: 30px;
     border-left: 1px solid hsl(200, 85.2%, 15.9%);
@@ -64,35 +29,42 @@
     display: flex;
     justify-content: start;
     flex-direction: column;
-    width: 38%;
+    width: 50%;
     border-right: 1px solid hsl(200, 85.2%, 15.9%);
 }
 
 .section-title-name {
-    margin-left: 10%;
+    align-self: center;
     color: hsl(200, 85.2%, 15.9%);
 }
 
+
+
+
 .select-position {
     height: 30px;
-    width: 50%;
-    margin-left: 7%;
-    margin-right: 2%;
-    margin-bottom: 2%;
+    width: 70%;
+    margin-bottom: 15.9%;
+    padding-left: 5px;
     background-color: hsl(199, 74%, 93%);
     border-radius: 5px 5px 0px 0px;
     border: 1px solid hsl(200, 85.2%, 15.9%);
     font-size: 14px;
     color: hsl(200, 85.2%, 15.9%);
 }
+.middle-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .middle-side-section {
-    width: 38%;
+    width: 25%;
     border-right: 1px solid hsl(200, 85.2%, 15.9%);
 }
 
 .right-side-section {
-    width: 24%;
+    width: 25%;
     padding-top: -20px;
     display: flex;
     justify-content: baseline;
@@ -133,7 +105,6 @@
 
 .emp-item {
     display: flex;
-    justify-content: space-around;
     background-color: hsl(210, 86%, 91%);
     height: 50px;
     margin-bottom: -1px;
@@ -155,9 +126,53 @@
 
 .emp-data {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-self: center;
-    padding: 8px;
+    margin-left: 20px;
+    width: 100px;
+    padding-right: 20px;
+}
+
+.name-data {
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    padding-left: 20px;
+}
+
+.right-sector {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 60%;
+}
+.left-sector {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.left-sector-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 60%;
+}
+
+.right-sector-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 40%;
+}
+
+.usr-data {
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    margin-left: 20px;
+    width: 100px;
+    padding-right: 20px;
 }
 
 .rows-box {
@@ -171,12 +186,11 @@
     margin-top:5px;
     margin-left: 10px;
     margin-right: 10px;
-    width: 30%;
+    width: 35%;
     background-color: hsl(199, 74%, 93%);
     padding-left: 12px;
     border-radius: 5px 5px 0px 0px;
     border: 1px solid hsl(200, 85.2%, 15.9%);
-    ;
     font-size: 14px;
     color: hsl(200, 85.2%, 15.9%);
 }
@@ -302,4 +316,19 @@
 
 .notification-left-section {
 
+}
+.spec-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 17px 5px 20px 5px;
+}
+
+.done-section {
+    color: rgb(10, 223, 10);
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    margin-top: 1px;
+    margin-left: 5px;
 }

@@ -12,30 +12,32 @@ export default function AboutUs() {
 
   return (
     <>
-      <div className="infoHead">О нас в цифрах</div>
-      <div className="about">
-        <div className="about-item">
-          <div className="about-count">{registration}</div>
-          <div className="about-description">
-            Регистраций пользователей на нашей платформе
+      <div className="about-us-div">
+        <div className="infoHead">О нас в цифрах</div>
+        <div className="about">
+          <div className="about-item">
+            <div className="about-count">{registration}</div>
+            <div className="about-description">
+              Регистраций пользователей на нашей платформе
+            </div>
           </div>
-        </div>
-        <div className="about-item">
-          <div className="about-count">{servises}</div>
-          <div className="about-description">
-            Оказанных медицинских услуг, в том числе проведённых консультаций
+          <div className="about-item">
+            <div className="about-count">{servises}</div>
+            <div className="about-description">
+              Оказанных медицинских услуг, в том числе проведённых консультаций
+            </div>
           </div>
-        </div>
-        <div className="about-item">
-          <div className="about-count">{employees}</div>
-          <div className="about-description">
-            Медицинских сотрудников оказывающих качественные услуги
+          <div className="about-item">
+            <div className="about-count">{employees}</div>
+            <div className="about-description">
+              Медицинских сотрудников оказывающих качественные услуги
+            </div>
           </div>
-        </div>
-        <div className="about-item">
-          <div className="about-count">{diagnoses}</div>
-          <div className="about-description">
-            Поставлено достоверных диагнозов
+          <div className="about-item">
+            <div className="about-count">{diagnoses}</div>
+            <div className="about-description">
+              Поставлено достоверных диагнозов
+            </div>
           </div>
         </div>
       </div>

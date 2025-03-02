@@ -9,12 +9,16 @@ export default function Head() {
   return (
     <>
       <div id="modal"></div>
-      <ToTopBtn />
-      <HeadDescription />
-      <Slider />
-      <AboutUs />
-      <UsefulLinks />
-      <Footer />
+      <div className="head">
+        <div className="head-content">
+          <ToTopBtn />
+          <HeadDescription />
+          <Slider />
+          <AboutUs />
+          <UsefulLinks />
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }

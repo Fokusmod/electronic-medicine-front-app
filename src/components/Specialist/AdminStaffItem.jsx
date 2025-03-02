@@ -19,8 +19,8 @@ export default function AdminStaffItem(props) {
         className="admin-staff-item "
         onClick={() => showSpesialistInfo(props.id)}
       >
-        <img src={props.photo} alt="admin" className="admin-photo" />
         <div className="admin-info">
+          <img src={props.photo} alt="admin" className="admin-photo" />
           <div className="admin-position">{props.position}</div>
           <div className="admin-name">{props.fullname}</div>
         </div>

@@ -2,7 +2,6 @@ import appointment from "/images/appointment.png";
 import card from "/images/med-card.png";
 import reception from "/images/reception.png";
 import specialists from "/images/specialists.png";
-import background from "/images/slider-background.png";
 import "./Head.css";
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -83,12 +82,14 @@ export default function Slider() {
   }
 
   return (
-    <div className="head">
-      <img className="background-image" src={background} />
+    <div className="slider-content">
       <div className="slider-info">
         <div className="slider-info-title ">{title}</div>
         <div className="slider-info-desc ">{desc}</div>
       </div>
+      <button className="slider-btn-prev" onClick={clickPrev}>
+        &#10148;
+      </button>
       <div ref={slider} className="slider">
         <div ref={sliderLine} className="slider-line">
           <div ref={sliderImages1} className="slider-img">
@@ -132,9 +133,6 @@ export default function Slider() {
           </div>
         </div>
       </div>
-      <button className="slider-btn-prev" onClick={clickPrev}>
-        &#10148;
-      </button>
       <button className="slider-btn-next" onClick={clickNext}>
         &#10148;
       </button>
