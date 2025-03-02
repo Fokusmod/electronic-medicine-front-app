@@ -5,24 +5,24 @@ import "./Modal.css";
 
 import Button from "../Button/Button";
 
-export default function Modal({ open, data, onClose }) {
+export default function Modal(props) {
   const dialog = useRef();
 
   useEffect(() => {
-    if (open) {
+    if (props.open) {
       dialog.current.showModal();
     } else {
       dialog.current.close();
     }
-  }, [open]);
+  }, [props.open]);
 
   return createPortal(
     <dialog ref={dialog}>
-      <div className="modal-title">Вы были записаны на приём.</div>
-      <div className="modal-data">{data}</div>
-      <div className="modal-message">Талон будет отправлен вам на почту</div>
+      <div className="modal-title">{props.title}</div>
+      <div className="modal-data">{props.data}</div>
+      <div className="modal-message">{props.message}</div>
       <div className="redirect-btn">
-        <Button name="OK" func={onClose} />
+        <Button name="OK" func={props.onClose} />
       </div>
     </dialog>,
     document.getElementById("modal")

@@ -24,6 +24,7 @@ export default function SectionItem(props) {
       allItems[i].classList.remove("emp-selected");
     }
   }
+
   return (
     <>
       <div
@@ -33,13 +34,31 @@ export default function SectionItem(props) {
           showSection(props.id);
         }}
       >
-        <div className="emp-data">{props.firstName}</div>
-        <div className="emp-data">{props.lastName}</div>
-        <div className="emp-data">{props.position}</div>
-        <div className="emp-data">{props.status}</div>
+        <div className="left-sector">
+          <div className="name-data">
+            {props.firstName + " " + props.lastName}
+          </div>
+        </div>
+        <div className="right-sector">
+          {props.roles.map(function (data, i) {
+            if (data.title === "ADMIN") {
+              return (
+                <div key={i} className="emp-data">
+                  {data.title}
+                </div>
+              );
+            }
+          })}
+          <div className="emp-data">{props.position}</div>
+          <div className="emp-data">{props.status}</div>
+        </div>
       </div>
       <div className="emp-section" id={props.id}>
-        <EmployyeSection />
+        <EmployyeSection
+          specs={props.specs}
+          id={props.id}
+          admin={props.admin}
+        />
       </div>
     </>
   );

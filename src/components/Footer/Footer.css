@@ -31,25 +31,24 @@
 .footer-head {
     color: white;
     padding-left: 25px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .footer-block-header {
-    height: 60px;
+    margin-top: 50px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    align-items: end;
     padding-bottom: 10px;
 
 }
 
 .reserved {
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
-    padding-top: 15px;
-    color: white;
+    color: rgb(138, 137, 177);
 }
 
 .footer-btn {
@@ -83,56 +82,9 @@
 }
 
 .footer-logo-icon {
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 30px;
+    height: 100px;
+    width: 250px !important;
 }
 
-@media screen and (max-width: 1700px) and (min-width: 1200px) {
-    
-    .footer-block-1 {
-        width: 60%
-    }
-
-    .footer-block-2 {
-        width: 40%;
-    }
-
-    .footer-head {
-        font-size: 25px;
-        padding: 0;
-    }
-
-    .footer-logo-icon {
-        padding: 0;
-        padding-top: 10px;
-        width: 300px;
-    }
-
-    .footer-block-header {
-        margin: 0;
-        padding: 0;
-        height: 40px;
-        margin-top: 30px;
-    }
-
-    .footer-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .footer-subscribe {
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 1199px) and (min-width: 992px) {
-    
-}
-
-@media screen and (max-width: 991px) and (min-width: 768px) {
-    
-}
-
-@media screen and (max-width: 768px) and (min-width: 480px) {
-    
-}

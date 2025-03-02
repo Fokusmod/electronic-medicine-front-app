@@ -1,16 +1,18 @@
 
 .appoint-head {
-    margin-top: 10%;
-    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    margin: auto;
+    margin-top: 65px;
+    background-color: white
 }
 
 .appoint-reserv {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    margin-right: 32%;
     margin-bottom: 10%;
+    width: 1100px
 }
 
 .appoint-reserv-stage {
@@ -18,8 +20,6 @@
     align-items: start;
     flex-direction: row;
     position: relative;
-    margin-left: 15%;
-    margin-right: 25%;
     width: 100%;
     border-top: 1px solid silver;
     border-bottom: 1px solid silver;
@@ -43,6 +43,11 @@
     background-color: hsl(200, 85.2%, 15.9%);
 }
 
+.footer-section {
+    width: 1100px;
+    margin: auto;
+} 
+
 .hide {
     display: none;
 }
@@ -56,10 +61,9 @@
 }
 
 .appoint-reserv-content {
-    margin-left: 15%;
-    margin-right: 32%;
-    margin-top: 1%;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .appoint-reserv-title {
@@ -81,7 +85,6 @@
 }
 
 .appoint-column {
-    display: flex;
     flex-direction: column;
     justify-content: start;
     width: 14.7%;
@@ -184,5 +187,10 @@
 
 .about-date-time { 
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.not-have-this-spec {
+    margin: auto;
     margin-bottom: 50px;
 }

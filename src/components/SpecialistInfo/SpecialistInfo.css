@@ -1,6 +1,13 @@
 .info-head {
-    margin-top: 10%;
-    margin-left: 28%;
+    width: 1100px;
+    margin: auto;
+    padding-top: 30px;
+    margin-top: 65px;
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .info-title {
@@ -16,7 +23,7 @@
 
 .info-photo {
     height: 400px;
-    width: 25%;
+    width: 35%;
     margin-right: 30px;
 }
 
@@ -24,11 +31,12 @@
     display: flex;
     flex-direction: row;
     height: 400px;
-    width: 34%;
+    width: 65%;
 }
 .about-left {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
     width: 50%;
 }
 
@@ -40,8 +48,16 @@
 }
 
 .about-item-box {
-    margin-left: 20px;
+    margin-top: 20px;
+    height: 100px;
+}
+
+.about-education-box {
+    margin-left: 20px !important;
+    margin-right: 0 !important;
     margin-top: 30px;
+    width: 47%;
+    height: 100px;
 }
 
 .about-item-title {
@@ -54,7 +70,7 @@
 
 .about-end {
     margin-top: 2%;
-    width: 62%;
+    width: 100%;
     margin-bottom: 10%;
     border-top: 1px solid silver;
 }
@@ -121,16 +137,32 @@
     padding: 10px;
 }
 
+
 .autor-review {
     padding: 10px;
+    height: 70px;
+    max-height: 70px;
+    overflow-y: scroll;
+}
+
+.autor-review::-webkit-scrollbar {
+    width: 5px;
+    overflow-y: auto;
+}
+
+.autor-review::-webkit-scrollbar-thumb {
+    background-color: hsl(200, 85.2%, 15.9%);
+    border-radius: 15px;
 }
 
 .about-hidden-info {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    max-height: 300px;
+    max-height: 350px;
+    max-width: 100%;
     padding-bottom: 30px;
+    overflow-y: scroll;
     border-bottom: 1px solid silver;
 }
 

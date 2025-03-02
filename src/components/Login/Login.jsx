@@ -5,7 +5,7 @@ import ToTopBtn from "../Navigate-Btn/ToTopBtn";
 import SignIn from "./SignIn.jsx";
 import SignUp from "./SignUp.jsx";
 
-export default function Login({ active }) {
+export default function Login() {
   const [IsActiveTab, setIsActiveTab] = useState("sigh-in");
 
   return (
@@ -31,6 +31,7 @@ export default function Login({ active }) {
               Войти
             </button>
             <button
+              style={{ marginRight: "-1px" }}
               onClick={() => {
                 setIsActiveTab("sigh-up");
               }}

@@ -1,10 +1,24 @@
 .main-content {
     display: flex;
-    justify-content: start;
+    justify-content: center;
+    margin: auto;
     flex-direction: column;
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-top: 65px;
+    width: 1100px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid silver;
+}
+
+.admin-staff-sector {
+    background-color: white;
+    border-radius: 10px;
+    border-top: 1px solid silver;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    width: 1100px;
+    margin: auto;
+    margin-top: 20px;
 }
 
 .find-specialist-box {
@@ -18,6 +32,7 @@
     width: 100%;
     margin-bottom: 10%;
     max-height: 850px;
+    min-height: 850px;
     overflow-y: scroll;
 }
 
@@ -58,7 +73,7 @@
 .specialist-item:hover:after{
     cursor: pointer;
     width: 100%;
-    height: 168px;
+    height: 174px;
     border-radius: 10px 10px 0 0;
     position: absolute;
     top: 0;
@@ -127,8 +142,11 @@
 .admin-staff-label {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 30px;
     font-weight: bold;
+    height: 50px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -137,16 +155,16 @@
     justify-content: start;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 11%;
-    margin-right: 10%;
-    margin-bottom: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
 }
 
 .admin-staff-item {
     position: relative;
     height: 400px;
     margin: 5px;
-    width: 19%;
+    width: 24%;
 }
 
 .admin-staff-item:hover {
@@ -156,7 +174,7 @@
 .admin-staff-item:hover:after {
     cursor: pointer;
     width: 100%;
-    height: 198px;
+    height: 122px;
     border-radius: 10px 10px 0 0;
     position: absolute;
     top: 0;
@@ -170,7 +188,7 @@
 }
 
 .admin-photo {
-    height: 100%;
+    height: 300px;
     width: 100%;
 }
 .admin-info {
@@ -180,11 +198,6 @@
     align-items: center;
     background-color: hsl(199, 68%, 83%);
     padding-bottom: 10px;
-    margin-top: -4px;
-}
-
-.admin-name {
-
 }
 
 .admin-position{

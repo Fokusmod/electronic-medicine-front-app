@@ -1,32 +1,25 @@
 import "./SpecialistInfo.css";
 
-export default function AboutEducation() {
+export default function AboutEducation(props) {
+  let education = props.content;
+
   return (
     <>
-      <div className="about-item-box" style={{ marginLeft: "0px" }}>
-        <div className="about-item-title">Профессиональное образование</div>
-        <div className="about-item-data">РНИМУ им. Н.И. Пирогова</div>
-      </div>
-      <div className="about-item-box" style={{ marginLeft: "0px" }}>
-        <div className="about-item-title">Повышение квалификации</div>
-        <div className="about-item-data">ККМЧ Первого МГМУ им И.М.Сеченова</div>
-      </div>
-      <div className="about-item-box" style={{ marginLeft: "0px" }}>
-        <div className="about-item-title">Повышение квалификации</div>
-        <div className="about-item-data">ККМЧ Первого МГМУ им И.М.Сеченова</div>
-      </div>
-      <div className="about-item-box" style={{ marginLeft: "0px" }}>
-        <div className="about-item-title">Повышение квалификации</div>
-        <div className="about-item-data">ККМЧ Первого МГМУ им И.М.Сеченова</div>
-      </div>
-      <div className="about-item-box" style={{ marginLeft: "0px" }}>
-        <div className="about-item-title">Повышение квалификации</div>
-        <div className="about-item-data">ККМЧ Первого МГМУ им И.М.Сеченова</div>
-      </div>
-      <div className="about-item-box" style={{ marginLeft: "0px" }}>
-        <div className="about-item-title">Повышение квалификации</div>
-        <div className="about-item-data">ККМЧ Первого МГМУ им И.М.Сеченова</div>
-      </div>
+      {education !== false &&
+        education.map(function (data, i) {
+          return (
+            <div
+              key={i}
+              className="about-education-box"
+              style={{ marginLeft: "0px" }}
+            >
+              <div className="about-item-title">
+                Профессиональное образование / Повышение квалификации
+              </div>
+              <div className="about-item-data">{data.title}</div>
+            </div>
+          );
+        })}
     </>
   );
 }
